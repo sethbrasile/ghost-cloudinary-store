@@ -59,17 +59,17 @@ class CloudinaryAdapter extends BaseAdapter{
 
   read(options) {
     options = options || {};
-    return new Promise(function (resolve, reject) {
-        var request = require('request').defaults({ encoding: null });
-        request.get(options.path, function (err, res, body) {
-            if (err) {
-                reject(new Error("Cannot download image"));
-            } else {
-                resolve(body);
-            }
-        });
+    return new BlueBird(function (resolve, reject) {
+      var request = require('request').defaults({ encoding: null });
+      request.get(options.path, function (err, res) {
+        if (err) {
+          reject(new Error("Cannot download image"));
+        } else {
+          resolve(res.body);
+        }
+      });
     });
-}
+  }
 }
 
 module.exports = CloudinaryAdapter;
