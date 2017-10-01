@@ -72,7 +72,11 @@ Note: These values can be obtained from your Cloudinary management console.
     "ghost-cloudinary-store": {
         "cloud_name": "yourCloudName",
         "api_key": "yourApiKey",
-        "api_secret": "yourApiSecret"
+        "api_secret": "yourApiSecret",
+        "configuration": {
+            "image": {},
+            "file": {}       
+         }
     }
 }
 ```
