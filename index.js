@@ -14,9 +14,10 @@ class CloudinaryAdapter extends BaseAdapter{
 
   exists(filename) {
     return new BlueBird(function(resolve) {
-      cloudinary.v2.api.resource(path.parse(filename).name, {type: 'upload'}, function(error, result) {
+      // Use explicit instead of resource because there's no rate limit for explicit
+      cloudinary.v2.uploader.explicit(path.parse(filename).name, {type: 'upload'}, function(error, result) {
         if (result) {
-          resolve(result);
+          resolve(true);
         } else {
           resolve(false);
         }
