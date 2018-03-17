@@ -1,0 +1,24 @@
+{
+    "storage": {
+        "active": "cloudinary-store",
+        "cloudinary-store": {
+            "auth": {
+                "cloud_name": "",
+                "api_key": "",
+                "api_secret": ""
+            },
+            "upload": {
+                "use_filename": true,
+                "unique_filename": false,
+                "overwrite": false,
+                "folder": "blog-images",
+                "tags": ["blog"]
+            },
+            "display": {
+                "quality": "auto",
+                "secure": false,
+                "cdn_subdomain": true
+            }
+        }
+    }
+}
