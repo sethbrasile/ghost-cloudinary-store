@@ -22,18 +22,18 @@ Cloudinary has some "advanced configuration options" for Pro users and etc.. tha
 
 2.1. Make the storage folder if it doesn't already exist `mkdir versions/$GHOST_VERSION/core/server/adapters/storage/`
 
-2.2. Copy `cloudinary-store` from `node_modules` to `versions/$GHOST_VERSION/core/server/adapters/storage`
+2.2. Copy `ghost-cloudinary-store` from `node_modules` to `versions/$GHOST_VERSION/core/server/adapters/storage`
   ```
-  cp -r node_modules/cloudinary-store versions/$GHOST_VERSION/core/server/adapters/storage
+  cp -r node_modules/ghost-cloudinary-store versions/$GHOST_VERSION/core/server/adapters/storage
   ```
 
 3. Install into the Ghost content folder
 
 3.1. Make the storage folder if it doesn't already exist `mkdir /$CONTENT_FOLDER/content/adapters/storage/`
 
-3.2. Copy `cloudinary-store` from `node_modules` to `$CONTENT_FOLDER/content/adapters/storage/`
+3.2. Copy `ghost-cloudinary-store` from `node_modules` to `$CONTENT_FOLDER/content/adapters/storage/`
   ```
-  cp -r node_modules/cloudinary-store $CONTENT_FOLDER/content/adapters/storage/
+  cp -r node_modules/ghost-cloudinary-store $CONTENT_FOLDER/content/adapters/storage/
   ```
 
 4. Follow the instructions below for [editing config.js][1]
@@ -45,9 +45,9 @@ Note: The `master` branch reflects what is published on NPM
 
 1. Navigate to Ghost's base folder and create a directory called `versions/$GHOST_VERSION/core/server/adapters/storage`
 
-2. Navigate into this new `storage` directory and run `git clone https://github.com/mmornati/ghost-cloudinary-store.git cloudinary-store`
+2. Navigate into this new `storage` directory and run `git clone https://github.com/mmornati/ghost-cloudinary-store.git ghost-cloudinary-store`
 
-3. Navigate into `cloudinary-store` and run `npm install`
+3. Navigate into `ghost-cloudinary-store` and run `npm install`
 
 4. Follow the instructions below for [editing config.js][1]
 
@@ -68,8 +68,8 @@ Note: These values can be obtained from your Cloudinary management console.
 
 ```json
 "storage": {
-    "active": "cloudinary-store",
-    "cloudinary-store": {
+    "active": "ghost-cloudinary-store",
+    "ghost-cloudinary-store": {
         "cloud_name": "yourCloudName",
         "api_key": "yourApiKey",
         "api_secret": "yourApiSecret"
@@ -86,7 +86,7 @@ In Ghost's `config.production.json` (the file where you set your URL, mail setti
 
 ```json
 "storage": {
-    "active": "cloudinary-store"
+    "active": "ghost-cloudinary-store"
 }
 ```
 
@@ -101,8 +101,8 @@ You can find the documentation of what you can configure, directly on the Cloudi
 
 ```json
 "storage": {
-    "active": "cloudinary-store",
-    "cloudinary-store": {
+    "active": "ghost-cloudinary-store",
+    "ghost-cloudinary-store": {
         "cloud_name": "yourCloudName",
         "api_key": "yourApiKey",
         "api_secret": "yourApiSecret",
@@ -116,13 +116,17 @@ You can find the documentation of what you can configure, directly on the Cloudi
                 "unique_filename": "false",
                 "phash": "true",
                 "overwrite": "false",
-                "invalidate": "true"
+                "invalidate": "true",
+                "folder": "blog-images",
+                "tags": ["blog"]
             }       
          }
     }
 }
 ```
 **NOTE:** The **cloud_name**, **api_key** and **api_secret** environment variables are not needed if you use the **CLOUDINARY_URL** environment variable.
+
+A `configuration.sample.json`file can be found into the project source to help you configure the plugin.
 
 The **file** part into the configuration json is used to define the filename to use. By default, without any configuration, cloudinary will select a random name for the uploaded image.
 This can't allow you to block the same image to be uploaded plenty of times. Anytime you will upload the image it gets a new name.
