@@ -1,6 +1,6 @@
 {
   "name": "ghost-cloudinary-store",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "Cloudinary storage adapter for Ghost >= 1.x",
   "main": "index.js",
   "keywords": [
