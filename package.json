@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "bluebird": "3.5.1",
-    "cloudinary": "~1.11.0",
+    "cloudinary": "~1.12.0",
     "ghost-storage-base": "0.0.2"
   },
   "devDependencies": {
