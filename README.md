@@ -2,5 +2,5 @@
 
 
 **DEPRECATED**
-As the referenced repo on the Ghost Documentation is pointing to this [repo](https://github.com/mmornati/ghost-cloudinary-store) and as I'm maintaining both 2 repo with the same code. I decided to go ahead using and upgrading only the other one.
-For an issue, update, ... you can go here: https://github.com/mmornati/ghost-cloudinary-store
+This is the original `ghost-cloudinary-store` but it will no longer receive regular updates or guarantee compatibility. [This repo](https://github.com/mmornati/ghost-cloudinary-store) on the other hand, is actively maintained, and is the repo backing the NPM package.
+For a issues and etc, go there.
