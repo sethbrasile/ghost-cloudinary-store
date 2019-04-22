@@ -4,6 +4,7 @@ addons:
         repo_token: $CODE_CLIMATE_TOKEN
 node_js:
   - "6"
+  - "10"
 
 install:
   - npm install
