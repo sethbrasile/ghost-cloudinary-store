@@ -13,10 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mmornati/ghost-cloudinary-store"
+    "url": "https://github.com/sethbrasile/ghost-cloudinary-store"
   },
   "bugs": {
-    "url": "https://github.com/mmornati/ghost-cloudinary-store/issues"
+    "url": "https://github.com/sethbrasile/ghost-cloudinary-store/issues"
   },
   "author": "Seth Brasile <seth.brasile@gmail.com>",
   "contributors": [
