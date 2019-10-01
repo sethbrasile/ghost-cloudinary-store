@@ -35,7 +35,7 @@
     "cover": "istanbul cover _mocha -- --recursive"
   },
   "dependencies": {
-    "bluebird": "3.5.4",
+    "bluebird": "3.6.0",
     "cloudinary": "~1.11.0",
     "ghost-storage-base": "0.0.3"
   },
